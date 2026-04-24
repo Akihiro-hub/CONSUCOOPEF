@@ -14,7 +14,6 @@ Estructura (Tablero + 4 módulos):
 LLM: Gemma 4 e2b local (Ollama)
 Representativo central: Mediana (no se usan medias ni promedios ponderados)
 
-Autor: Akihiro / Colaboración: Claude (Anthropic)
 """
 
 from __future__ import annotations
