@@ -1790,11 +1790,19 @@ with tab_dashboard:
                     df_disp = dash["top10_anom"].head(10).copy()
                     df_disp["Posición"] = range(1, len(df_disp) + 1)
                     df_disp["Score"] = df_disp["anomaly_score"].round(3)
-                    df_disp["Cooperativa"] = df_disp["coop"].str.slice(0, 28) + "..."
+                    df_disp["Cooperativa"] = df_disp["coop"]
                     df_disp["Posible irregularidad"] = df_disp["top_concern"]
                     st.dataframe(
                         df_disp[["Posición", "Cooperativa", "Score", "Posible irregularidad"]],
                         use_container_width=True, hide_index=True, height=380,
+                        column_config={
+                            "Posición": st.column_config.NumberColumn("Posición", width="small"),
+                            "Cooperativa": st.column_config.TextColumn("Cooperativa", width="large"),
+                            "Score": st.column_config.NumberColumn("Score", width="small"),
+                            "Posible irregularidad": st.column_config.TextColumn(
+                                "Posible irregularidad", width="medium",
+                            ),
+                        },
                     )
 
 
