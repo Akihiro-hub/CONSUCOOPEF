@@ -1,0 +1,11 @@
+streamlit>=1.32
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1
+rapidfuzz>=3.0
+scipy>=1.11
+scikit-learn>=1.3
+plotly>=5.18
+lingam>=1.8
+graphviz>=0.20
+ollama>=0.1.7
